@@ -1,23 +1,7 @@
 import math
 
 
-def menu():
-    first_num = input('Введите первое: ')
-    second_num = input('Введите второе число: ')
-    action = input('Выберете действие и нажмите на кнопку: '
-                   '\n 1 - Деление ')
-
-
-def calculate(first_num, second_num):
-    if first_num == int and second_num == int:
-        return Division()
-
-
-menu()
-calculate(4, 2)
-
-
-def Division(first_num, second_num):
+def division(first_num, second_num):
     if second_num != 0:
         print(first_num / second_num)
     if isinstance(first_num, float) or isinstance(second_num, float):
@@ -26,7 +10,7 @@ def Division(first_num, second_num):
         return print('Что-то пошло не так. Проверьте корректность введеных данных')
 
 
-def Multipl(first_num, second_num):
+def multipl(first_num, second_num):
     if isinstance(first_num, int) or isinstance(second_num, int):
         return print(first_num * second_num)
     if isinstance(first_num, float) or isinstance(second_num, float):
@@ -35,7 +19,7 @@ def Multipl(first_num, second_num):
         print('Что-то пошло не так. Проверьте корректность введеных данных')
 
 
-def Addition(first_num, second_num):
+def addition(first_num, second_num):
     if isinstance(first_num, int) or isinstance(second_num, int):
         return print(first_num + second_num)
     if isinstance(first_num, float) or isinstance(second_num, float):
@@ -44,7 +28,7 @@ def Addition(first_num, second_num):
         print('Что-то пошло не так. Проверьте корректность введеных данных')
 
 
-def Substraction(first_num, second_num):
+def substraction(first_num, second_num):
     if isinstance(first_num, int) or isinstance(second_num, int):
         return print(first_num - second_num)
     if isinstance(first_num, float) or isinstance(second_num, float):
@@ -53,7 +37,7 @@ def Substraction(first_num, second_num):
         print('Что-то пошло не так. Проверьте корректность введеных данных')
 
 
-def Enlarging(first_num, second_num):
+def enlarging(first_num, second_num):
     if isinstance(first_num, int) or isinstance(second_num, int):
         return print(first_num ** second_num)
     if isinstance(first_num, float) or isinstance(second_num, float):
@@ -83,8 +67,69 @@ def tangens(first_num):
         print('Что-то пошло не так. Проверьте корректность введеных данных')
 
 
-def Square_Root(first_num):
+def square_root(first_num):
     if isinstance(first_num, int) or isinstance(first_num, float):
         return print(math.sqrt(first_num))
     else:
         print('Что-то пoшло не так. Проверьте корректность введеных данных')
+
+
+while True:
+    print('Добро пожаловать в консольный инженерный калькулятор!')
+    print('Выберете желаемое действие: ')
+    print('*Примечание: Если у Вас действие с 6 по 9 включительно вводить второе число не требуется!')
+    print('1. Деление')
+    print('2. Умножение')
+    print('3. Сумма')
+    print('4. Разность')
+    print('5. Возведение в степень')
+    print('6. Косинус угла')
+    print('7. Синус угла')
+    print('8. Тангенс угла')
+    print('9. Извлечение квадратного корня')
+    print('10. Выход')
+
+    choose = input('Введите номер операции (1, 2, 3, 4, 5, 6, 7, 8, 9):  ')
+
+    if choose == '10':
+        print('Выход из прораммы')
+        break
+
+    if choose in ('1', '2', '3', '4', '5'):
+        first_number = float(input('Введите первое число: '))
+
+    if choose in ('1', '2', '3', '4', '5'):
+        second_number = float(input('Введите второе число: '))
+
+    if choose in ('6', '7', '8', '9'):
+        second_number = float(input('Введите одно число: '))
+
+        if choose == '1':
+            print('Результат:', division(first_number, second_number))
+
+        if choose == '2':
+            print('Результат:', multipl(first_number, second_number))
+
+        if choose == '3':
+            print('Результат:', addition(first_number, second_number))
+
+        if choose == '4':
+            print('Результат:', substraction(first_number, second_number))
+
+        if choose == '5':
+            print('Результат:', enlarging(first_number, second_number))
+
+        if choose == '6':
+            print('Результат:', sinus(first_number))
+
+        if choose == '7':
+            print('Результат:', cosinus(first_number))
+
+        if choose == '8':
+            print('Результат:', tangens(first_number))
+
+        if choose == '9':
+            print('Результат:', square_root(first_number))
+
+    else:
+        print('Некорректный ввод. Попробуйте ввести другое число.')
