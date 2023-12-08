@@ -71,4 +71,4 @@ def Square_Root(first_num):
     if isinstance(first_num, int) or isinstance(first_num, float):
         return print(math.sqrt(first_num))
     else:
-        print('Что-то пошло не так. Проверьте корректность введеных данных')
+        print('Что-то пoшло не так. Проверьте корректность введеных данных')
