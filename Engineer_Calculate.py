@@ -1,6 +1,22 @@
 import math
 
 
+def menu():
+    first_num = input('Введите первое: ')
+    second_num = input('Введите второе число: ')
+    action = input('Выберете действие и нажмите на кнопку: '
+                   '\n 1 - Деление ')
+
+
+def calculate(first_num, second_num):
+    if first_num == int and second_num == int:
+        return Division()
+
+
+menu()
+calculate(4, 2)
+
+
 def Division(first_num, second_num):
     if second_num != 0:
         print(first_num / second_num)
