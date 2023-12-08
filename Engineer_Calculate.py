@@ -89,10 +89,10 @@ while True:
     print('9. Извлечение квадратного корня')
     print('10. Выход')
 
-    choose = input('Введите номер операции (1, 2, 3, 4, 5, 6, 7, 8, 9):  ')
+    choose = input('Введите номер операции (1, 2, 3, 4, 5, 6, 7, 8, 9, 10):  ')
 
     if choose == '10':
-        print('Выход из прораммы')
+        print('Выход из программы')
         break
 
     if choose in ('1', '2', '3', '4', '5'):
@@ -102,34 +102,34 @@ while True:
         second_number = float(input('Введите второе число: '))
 
     if choose in ('6', '7', '8', '9'):
-        second_number = float(input('Введите одно число: '))
+        number_special = float(input('Введите одно число: '))
 
-        if choose == '1':
-            print('Результат:', division(first_number, second_number))
+    elif choose == '1':
+        print('Результат:', division(first_number, second_number))
 
-        if choose == '2':
-            print('Результат:', multipl(first_number, second_number))
+    elif choose == '2':
+        print('Результат:', multipl(first_number, second_number))
 
-        if choose == '3':
-            print('Результат:', addition(first_number, second_number))
+    elif choose == '3':
+        print('Результат:', addition(first_number, second_number))
 
-        if choose == '4':
-            print('Результат:', substraction(first_number, second_number))
+    elif choose == '4':
+        print('Результат:', substraction(first_number, second_number))
 
-        if choose == '5':
-            print('Результат:', enlarging(first_number, second_number))
+    elif choose == '5':
+        print('Результат:', enlarging(first_number, second_number))
 
-        if choose == '6':
-            print('Результат:', sinus(first_number))
+    if choose == '6':
+        print('Результат:', sinus(number_special))
 
-        if choose == '7':
-            print('Результат:', cosinus(first_number))
+    if choose == '7':
+        print('Результат:', cosinus(number_special))
 
-        if choose == '8':
-            print('Результат:', tangens(first_number))
+    if choose == '8':
+        print('Результат:', tangens(number_special))
 
-        if choose == '9':
-            print('Результат:', square_root(first_number))
+    if choose == '9':
+        print('Результат:', square_root(number_special))
 
-    else:
-        print('Некорректный ввод. Попробуйте ввести другое число.')
+else:
+    print('Некорректный ввод. Попробуйте ввести другое число.')
